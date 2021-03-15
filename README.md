@@ -1,24 +1,55 @@
 # React Layout Library by [@bacebu4](https://www.instagram.com/ui.bace/)
 
-React Layout Library is used for the unified system of laying out React Components by adding to them specified props such as `mt` (stands fro *margin-top*) and `ml`.
+React Layout Library is used for the unified system of laying out React Components by adding to them specified props such as `mt` (stands fro *margin-top*) and `ml` in `px` units.
+
+The props are being added by applying Higher Order Components (HOC) to your components.
+
+Also the library provides HOC for creating unified style for shadows. Check the example usage below.
+
+**NOTE**: You can use those HOC's separately from each other.
 
 ## Usage
 
 Check example/src/\* for usage.
 
 ```js
+// SomeButton.tsx
+
+import styled from "styled-components";
+import { withLayoutStyles } from "react-layout-library";
+import { withShadowStyles } from "react-layout-library";
+
+const SomeButton = styled.button`
+  color: #fff;
+  background-color: #6A63DD;
+  flex: 1;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 16px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+`;
+
+export default withShadowStyles(withLayoutStyles(SomeButton));
+```
+
+```js
+// App.tsx
 import SomeButton from 'SomeButton';
 
-<SomeButton mt={32} ml={16}>Sample button</SomeButton>
+<SomeButton>Sample button</SomeButton>
 
-<BaceButton isSolid>Sample solid button</BaceButton>
+<SomeButton mt={32} ml={16}>
+	Sample button with margin top=32px and margin-left=16px
+</SomeButton>
 ```
 
 ## Development (`src`, `lib` and the build process)
 
-**NOTE:** The source code for the component is in `src`. A transpiled CommonJS version (generated with Babel) is available in `lib` for use with node.js, browserify and webpack. A UMD bundle is also built to `dist`, which can be included without the need for any build system.
+**NOTE:** The source code for the component is in `src`. A transpiled CommonJS version (generated with Babel) is available in `lib` for use with node.js, browserify and webpack.
 
-To build, watch and serve the examples (which will also watch the component source), run `npm start`. If you just want to watch changes to `src` and rebuild `lib`, run `npm run watch` (this is useful if you are working with `npm link`).
+To build, watch and serve the examples (which will also watch the component source), run `npm run dev`.
 
 ## License
 
