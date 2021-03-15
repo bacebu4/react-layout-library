@@ -26,6 +26,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "example/src", "src", "tests/components"
+    "example/src", "src"
   ],
 }
