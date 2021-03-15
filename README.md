@@ -1,10 +1,14 @@
+[![version](https://img.shields.io/npm/v/react-layout-library.svg?style=flat-square)](https://www.npmjs.com/package/react-layout-library)
+[![size](https://img.shields.io/badge/self%20size-2.82%20kB-green)](https://bundlephobia.com/result?p=react-layout-library@1.0.1)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+
 # React Layout Library by [@bacebu4](https://www.instagram.com/ui.bace/)
 
 React Layout Library is used for the unified system of laying out React Components by adding to them specified props such as `mt` (stands fro *margin-top*) and `ml` in `px` units.
 
 The props are being added by applying Higher Order Components (HOC) to your components.
 
-Also the library provides HOC for creating unified style for shadows. Check the example usage below.
+Besides that the library provides HOC for creating unified style for shadows and `FlexBox` component for easy layouts.
 
 **NOTE**: You can use those HOC's separately from each other.
 
@@ -26,8 +30,7 @@ Use `createShadowStyles` to create custom HOC with custom `box-shadow` propertie
 // StyledButton.tsx
 
 import styled from "styled-components";
-import { withLayoutStyles } from "react-layout-library";
-import { createShadowStyles } from "react-layout-library";
+import { withLayoutStyles, createShadowStyles } from "react-layout-library";
 
 const withShadowStyles = createShadowStyles({
 	x: 2,
@@ -47,12 +50,16 @@ export const StyledButton = withShadowStyles(withLayoutStyles(SomeButtonLayout))
 ```js
 // App.tsx
 import { StyledButton } from './StyledButton';
+import { FlexBox } from 'react-layout-library';
 
-<StyledButton>Sample button</StyledButton>
+<FlexBox jc="center" ai="center" height="100vh">
+	<StyledButton>Sample button</StyledButton>
 
-<StyledButton mt={32} ml={16}>
-	Sample button with margin top=32px and margin-left=16px
-</StyledButton>
+	<StyledButton mt={32} ml={16}>
+		Sample button with margin-top=32px and margin-left=16px
+	</StyledButton>
+</FlexBox>
+
 ```
 
 ## Development (`src`, `lib` and the build process)
