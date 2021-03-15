@@ -10,7 +10,7 @@ Also the library provides HOC for creating unified style for shadows. Check the 
 
 ## Usage
 
-Check [example/src/\*](/examples/src) for more in-depth usage.
+Check [example/src/\*](/example/src) for more in-depth usage.
 
 First, install the dependencies
 ```shell
