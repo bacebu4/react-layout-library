@@ -10,11 +10,12 @@ Also the library provides HOC for creating unified style for shadows. Check the 
 
 ## Usage
 
-Check example/src/\* for usage.
+Check [example/src/\*](/examples/src) for more in-depth usage.
 
 First, install the dependencies
 ```shell
 npm i -D styled-components
+npm i -D react-layout-library
 ```
 
 Use `withLayoutStyles` to add `mt` and `ml` props to your styled component.
