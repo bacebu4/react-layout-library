@@ -12,37 +12,46 @@ Also the library provides HOC for creating unified style for shadows. Check the 
 
 Check example/src/\* for usage.
 
+First, install the dependencies
+```shell
+npm i -D styled-components
+```
+
+Use `withLayoutStyles` to add `mt` and `ml` props to your styled component.
+
+Use `createShadowStyles` to create custom HOC with custom `box-shadow` properties applied.
+
 ```js
-// SomeButton.tsx
+// StyledButton.tsx
 
 import styled from "styled-components";
 import { withLayoutStyles } from "react-layout-library";
-import { withShadowStyles } from "react-layout-library";
+import { createShadowStyles } from "react-layout-library";
 
-const SomeButton = styled.button`
-  color: #fff;
-  background-color: #6A63DD;
-  flex: 1;
+const withShadowStyles = createShadowStyles({
+	x: 2,
+	y: 3,
+	b: 10,
+	s: 12,
+	color: '#0001A'
+})
+
+const StyledButtonLayout = styled.button`
   padding: 12px 16px;
-  border: 0;
-  border-radius: 16px;
-  font-family: inherit;
-  font-weight: 600;
-  cursor: pointer;
 `;
 
-export default withShadowStyles(withLayoutStyles(SomeButton));
+export const StyledButton = withShadowStyles(withLayoutStyles(SomeButtonLayout));
 ```
 
 ```js
 // App.tsx
-import SomeButton from 'SomeButton';
+import { StyledButton } from './StyledButton';
 
-<SomeButton>Sample button</SomeButton>
+<StyledButton>Sample button</StyledButton>
 
-<SomeButton mt={32} ml={16}>
+<StyledButton mt={32} ml={16}>
 	Sample button with margin top=32px and margin-left=16px
-</SomeButton>
+</StyledButton>
 ```
 
 ## Development (`src`, `lib` and the build process)
