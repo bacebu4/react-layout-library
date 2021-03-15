@@ -1,7 +1,8 @@
 {
   "name": "react-layout-library",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Library based on styled-components that provides unified interface for layouts",
+  "keywords": ["react", "styled-component", "hoc", "layout", "react-layout-component", "react-layout-components", "react-layout", "react-layouts"],
   "main": "lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
