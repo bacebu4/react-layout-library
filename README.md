@@ -44,11 +44,12 @@ const StyledButtonLayout = styled.button`
   padding: 12px 16px;
 `;
 
-export const StyledButton = withShadowStyles(withLayoutStyles(SomeButtonLayout));
+export const StyledButton = withShadowStyles(withLayoutStyles(StyledButtonLayout));
 ```
 
 ```js
 // App.tsx
+
 import { StyledButton } from './StyledButton';
 import { FlexBox } from 'react-layout-library';
 
