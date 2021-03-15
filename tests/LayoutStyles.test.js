@@ -26,7 +26,6 @@ describe("withLayoutStyles", () => {
         </ModifiedComponent>
       )
       .toJSON();
-    console.log(tree);
     expect(tree).toHaveStyleRule("margin-top", "10px");
     expect(tree).toHaveStyleRule("margin-left", "10px");
   });
