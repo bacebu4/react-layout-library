@@ -13,7 +13,7 @@ const withShadowStyles = createShadowStyle({
   color: "#000",
 });
 
-const BaceButton = styled.button<BaceButtonProps>`
+const StyledButton = styled.button<BaceButtonProps>`
   flex: 1;
   padding: 12px 16px;
   font-family: inherit;
@@ -25,4 +25,6 @@ const BaceButton = styled.button<BaceButtonProps>`
   cursor: pointer;
 `;
 
-export default withShadowStyles(withLayoutStyles(BaceButton));
+export const StyledButtonWithStyles = withShadowStyles(
+  withLayoutStyles(StyledButton)
+);
