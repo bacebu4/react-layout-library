@@ -37,7 +37,7 @@ module.exports = {
   resolve: {
     extensions: [".jsx", ".js", ".ts", ".tsx"],
     alias: {
-      "@ui-library": path.resolve(__dirname, "src"),
+      "react-layout-library": path.resolve(__dirname, "src"),
     },
   },
   devServer: {

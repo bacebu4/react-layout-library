@@ -1,6 +1,5 @@
+import { createShadowStyle, withLayoutStyles } from "react-layout-library";
 import styled from "styled-components";
-import { withLayoutStyles } from "../../src/LayoutStyles";
-import { createShadowStyle } from "../../src/ShadowStyles";
 
 type BaceButtonProps = {
   isSolid?: boolean;
@@ -15,14 +14,15 @@ const withShadowStyles = createShadowStyle({
 });
 
 const BaceButton = styled.button<BaceButtonProps>`
-  color: ${(props) => (props.isSolid ? "#fff" : "#6A63DD")};
-  background-color: ${(props) => (props.isSolid ? "#6A63DD" : "#6A63DD1a")};
   flex: 1;
   padding: 12px 16px;
-  border: 0;
-  border-radius: 16px;
   font-family: inherit;
   font-weight: 600;
+  color: ${(props) => (props.isSolid ? "#fff" : "#6A63DD")};
+  background-color: ${(props) => (props.isSolid ? "#6A63DD" : "#6A63DD1a")};
+  border: 0;
+  border-radius: 16px;
   cursor: pointer;
 `;
+
 export default withShadowStyles(withLayoutStyles(BaceButton));
