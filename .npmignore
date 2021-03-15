@@ -1,0 +1,10 @@
+example
+node_modules
+src
+.editorconfig
+.eslintrc.js
+.eslintignore
+.babelrc
+tsconfig.json
+webpack.config.js
+tests

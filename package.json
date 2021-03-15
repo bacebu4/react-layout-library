@@ -1,0 +1,80 @@
+{
+  "name": "react-layout-library",
+  "version": "0.2.6",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bacebu4/react-layout-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bacebu4/react-layout-library/issues"
+  },
+  "homepage": "https://github.com/bacebu4/react-layout-library#readme",
+  "scripts": {
+    "gen": "tsc src/*.tsx  --module AMD --jsx react --emitDeclarationOnly --moduleResolution node --declaration --outFile index.d.ts",
+    "clean": "rimraf lib es",
+    "build:cjs": "babel src --out-dir lib --extensions \".ts,.tsx\"",
+    "build:es": "cross-env BABEL_ENV=jsnext babel src --out-dir es --extensions \".ts,.tsx\"",
+    "test": "npx jest",
+    "dev": "webpack serve --mode development --open --hot",
+    "build:wp": "webpack --mode production --progress",
+    "build": "npm run clean && npm run build:cjs && npm run build:es"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.2",
+    "@types/styled-components": "^5.1.8",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.2.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^26.6.3",
+    "jest-dom": "^4.0.0",
+    "jest-styled-components": "^7.0.3",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.3",
+    "webpack": "^5.25.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "types": "index.d.ts",
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ]
+  }
+}
