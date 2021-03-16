@@ -2,7 +2,16 @@
   "name": "react-layout-library",
   "version": "1.0.2",
   "description": "Library based on styled-components that provides unified interface for layouts",
-  "keywords": ["react", "styled-component", "hoc", "layout", "react-layout-component", "react-layout-components", "react-layout", "react-layouts"],
+  "keywords": [
+    "react",
+    "styled-component",
+    "hoc",
+    "layout",
+    "react-layout-component",
+    "react-layout-components",
+    "react-layout",
+    "react-layouts"
+  ],
   "main": "lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
@@ -19,6 +28,7 @@
   },
   "homepage": "https://github.com/bacebu4/react-layout-library#readme",
   "scripts": {
+    "editorconfig": "npx editorconfig-checker",
     "gen": "tsc src/*.tsx  --module AMD --jsx react --emitDeclarationOnly --moduleResolution node --declaration --outFile index.d.ts",
     "clean": "rimraf lib es",
     "build:cjs": "babel src --out-dir lib --extensions \".ts,.tsx\"",
@@ -46,6 +56,7 @@
     "@typescript-eslint/parser": "^4.17.0",
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
+    "editorconfig-checker": "^4.0.0",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
