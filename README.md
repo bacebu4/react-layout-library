@@ -41,7 +41,7 @@ const withShadowStyles = createShadowStyles({
 })
 
 const StyledButtonLayout = styled.button`
-  padding: 12px 16px;
+	padding: 12px 16px;
 `;
 
 export const StyledButton = withShadowStyles(withLayoutStyles(StyledButtonLayout));
