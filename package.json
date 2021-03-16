@@ -29,6 +29,7 @@
   "homepage": "https://github.com/bacebu4/react-layout-library#readme",
   "scripts": {
     "editorconfig": "npx editorconfig-checker",
+    "eslint": "npx eslint src",
     "gen": "tsc src/*.tsx  --module AMD --jsx react --emitDeclarationOnly --moduleResolution node --declaration --outFile index.d.ts",
     "clean": "rimraf lib es",
     "build:cjs": "babel src --out-dir lib --extensions \".ts,.tsx\"",
