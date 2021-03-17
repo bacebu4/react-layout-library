@@ -1,0 +1,46 @@
+name: Npm Publish
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'package.json'
+      - 'CHANGELOG.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN_ACTION }}
+      - name: Bump version and push tag
+        uses: TriPSs/conventional-changelog-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN_ACTION }}
+          git-message: 'chore(release): {version}'
+          preset: 'angular'
+          tag-prefix: ''
+          output-file: 'CHANGELOG.md'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
