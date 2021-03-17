@@ -1,3 +1,12 @@
+## [1.3.2](https://github.com/bacebu4/react-layout-library/compare/1.3.0...1.3.2) (2021-03-17)
+
+
+### Bug Fixes
+
+* right version ([de471b5](https://github.com/bacebu4/react-layout-library/commit/de471b5712b6ffe47ec0866650502c0c413a9c10))
+
+
+
 # [1.3.0](https://github.com/bacebu4/react-layout-library/compare/1.2.0...1.3.0) (2021-03-17)
 
 
