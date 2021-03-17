@@ -4,6 +4,8 @@ declare module "LayoutStyles" {
     type LayoutStylesProps = {
         mt?: number;
         ml?: number;
+        mr?: number;
+        mb?: number;
     };
     export function withLayoutStyles<P>(Component: React.FC<P>): StyledComponent<React.FC<P>, object, P & LayoutStylesProps, never>;
 }
@@ -25,7 +27,6 @@ declare module "FlexBox" {
         ai?: "center" | "end" | "flex-end" | "flex-start" | "self-end" | "self-start" | "start" | "baseline" | "normal" | "stretch";
         mt?: number;
         ml?: number;
-        pr?: number;
         w?: string;
         h?: string;
         margin?: string;
