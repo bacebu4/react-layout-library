@@ -1,4 +1,14 @@
-# 1.1.0 (2021-03-17)
+# [1.2.0](https://github.com/bacebu4/react-layout-library/compare/1.1.0...1.2.0) (2021-03-17)
+
+
+### Features
+
+* all margins props are present and no overwrites ([8635273](https://github.com/bacebu4/react-layout-library/commit/86352734ac5db91b26be683b1140090c0b9099d2))
+* defenitions are added ([479db5e](https://github.com/bacebu4/react-layout-library/commit/479db5e73971d4ce18d614ccf68bcd2b81b62ecd))
+
+
+
+# [1.1.0](https://github.com/bacebu4/react-layout-library/compare/0a883c8cdd089c1c2f044ba81db2c8d6f7d7055b...1.1.0) (2021-03-17)
 
 
 ### Bug Fixes
