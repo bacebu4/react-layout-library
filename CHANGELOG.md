@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/bacebu4/react-layout-library/compare/1.2.0...1.3.0) (2021-03-17)
+
+
+### Features
+
+* better build script ([40df9b8](https://github.com/bacebu4/react-layout-library/commit/40df9b8a13714ab68e71221da8717ae570d7e395))
+
+
+
 # [1.2.0](https://github.com/bacebu4/react-layout-library/compare/1.1.0...1.2.0) (2021-03-17)
 
 
