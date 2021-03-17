@@ -37,7 +37,7 @@
     "test": "npx jest",
     "dev": "webpack serve --mode development --open --hot",
     "build:wp": "webpack --mode production --progress",
-    "build": "npm run test && npm run clean && npm run build:cjs && npm run build:es && npm run gen"
+    "build": "npm run clean && npm run build:cjs && npm run build:es && npm run gen"
   },
   "author": "",
   "license": "MIT",
