@@ -23,6 +23,8 @@ interface FlexBoxProps {
     | "stretch";
   mt?: number;
   ml?: number;
+  mr?: number;
+  mb?: number;
   w?: string;
   h?: string;
   margin?: string;
@@ -35,6 +37,8 @@ export const FlexBox = styled.div<FlexBoxProps>`
   justify-content: ${(props) => props.jc};
   align-items: ${(props) => props.ai};
   margin-left: ${(props) => props.ml}px;
+  margin-right: ${(props) => props.ml}px;
+  margin-bottom: ${(props) => props.ml}px;
   margin-top: ${(props) => props.mt}px;
   margin: ${(props) => props.margin};
   width: ${(props) => props.w};
