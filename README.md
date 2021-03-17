@@ -56,7 +56,7 @@ import { FlexBox } from 'react-layout-library';
 <FlexBox jc="center" ai="center" height="100vh">
 	<StyledButton>Sample button</StyledButton>
 
-	<StyledButton mt={32} ml={16}>
+	<StyledButton mt={32} ml={16} mb={16} mr={4}>
 		Sample button with margin-top=32px and margin-left=16px
 	</StyledButton>
 </FlexBox>
