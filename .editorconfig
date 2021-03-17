@@ -7,6 +7,22 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 indent_style = space
 
+[/es/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+[/lib/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
 [*.json]
 indent_style = space
 indent_size = 2
