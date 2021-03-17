@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/bacebu4/react-layout-library/compare/1.3.2...1.4.0) (2021-03-17)
+
+
+### Features
+
+* **FlexBox:** added additional margin proprs ([f734fb0](https://github.com/bacebu4/react-layout-library/commit/f734fb030c36210779eb017f0e827ede8a6e809c))
+
+
+
 ## [1.3.2](https://github.com/bacebu4/react-layout-library/compare/1.3.0...1.3.2) (2021-03-17)
 
 
