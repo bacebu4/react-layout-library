@@ -13,7 +13,6 @@ describe("FlexBox", () => {
           ai="center"
           mt={16}
           ml={16}
-          pr={16}
           w="100%"
           h="100vh"
           margin="0 auto"

@@ -23,7 +23,6 @@ interface FlexBoxProps {
     | "stretch";
   mt?: number;
   ml?: number;
-  pr?: number;
   w?: string;
   h?: string;
   margin?: string;
@@ -38,7 +37,6 @@ export const FlexBox = styled.div<FlexBoxProps>`
   margin-left: ${(props) => props.ml}px;
   margin-top: ${(props) => props.mt}px;
   margin: ${(props) => props.margin};
-  padding-right: ${(props) => props.pr}px;
   width: ${(props) => props.w};
   height: ${(props) => props.h};
 `;
