@@ -27,9 +27,16 @@ declare module "FlexBox" {
         ai?: "center" | "end" | "flex-end" | "flex-start" | "self-end" | "self-start" | "start" | "baseline" | "normal" | "stretch";
         mt?: number;
         ml?: number;
+        mr?: number;
+        mb?: number;
+        pt?: number;
+        pl?: number;
+        pr?: number;
+        pb?: number;
         w?: string;
         h?: string;
         margin?: string;
+        padding?: string;
         direction?: "column";
     }
     export const FlexBox: import("styled-components").StyledComponent<"div", any, FlexBoxProps, never>;
