@@ -1,3 +1,12 @@
+## [1.5.2](https://github.com/bacebu4/react-layout-library/compare/1.5.0...1.5.2) (2021-03-18)
+
+
+### Bug Fixes
+
+* **FlexBox:** m{?} and p{?} are not overwritten anymore ([ea25b5a](https://github.com/bacebu4/react-layout-library/commit/ea25b5a320731c1343f9774f3150ce650cb199ab))
+
+
+
 # [1.5.0](https://github.com/bacebu4/react-layout-library/compare/1.4.0...1.5.0) (2021-03-18)
 
 
@@ -31,16 +40,6 @@
 ### Features
 
 * better build script ([40df9b8](https://github.com/bacebu4/react-layout-library/commit/40df9b8a13714ab68e71221da8717ae570d7e395))
-
-
-
-# [1.2.0](https://github.com/bacebu4/react-layout-library/compare/1.1.0...1.2.0) (2021-03-17)
-
-
-### Features
-
-* all margins props are present and no overwrites ([8635273](https://github.com/bacebu4/react-layout-library/commit/86352734ac5db91b26be683b1140090c0b9099d2))
-* defenitions are added ([479db5e](https://github.com/bacebu4/react-layout-library/commit/479db5e73971d4ce18d614ccf68bcd2b81b62ecd))
 
 
 
