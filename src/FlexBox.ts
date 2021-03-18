@@ -49,8 +49,18 @@ export const FlexBox = styled.div<FlexBoxProps>`
   padding-right: ${(props) => props.pr}px;
   padding-bottom: ${(props) => props.pb}px;
   padding-top: ${(props) => props.pt}px;
-  margin: ${(props) => props.margin};
-  padding: ${(props) => props.padding};
+  ${(props) => {
+    if (props.margin) {
+      return `margin: ${props.margin}px;`;
+    }
+    return "";
+  }}
+  ${(props) => {
+    if (props.padding) {
+      return `padding: ${props.padding}px;`;
+    }
+    return "";
+  }}
   width: ${(props) => props.w};
   height: ${(props) => props.h};
 `;
