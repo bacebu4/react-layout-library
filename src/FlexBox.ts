@@ -25,9 +25,14 @@ interface FlexBoxProps {
   ml?: number;
   mr?: number;
   mb?: number;
+  pt?: number;
+  pl?: number;
+  pr?: number;
+  pb?: number;
   w?: string;
   h?: string;
   margin?: string;
+  padding?: string;
   direction?: "column";
 }
 
@@ -40,7 +45,12 @@ export const FlexBox = styled.div<FlexBoxProps>`
   margin-right: ${(props) => props.ml}px;
   margin-bottom: ${(props) => props.ml}px;
   margin-top: ${(props) => props.mt}px;
+  padding-left: ${(props) => props.pl}px;
+  padding-right: ${(props) => props.pr}px;
+  padding-bottom: ${(props) => props.pb}px;
+  padding-top: ${(props) => props.pt}px;
   margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
   width: ${(props) => props.w};
   height: ${(props) => props.h};
 `;
