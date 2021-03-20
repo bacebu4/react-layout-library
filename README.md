@@ -4,7 +4,7 @@
 
 # React Layout Library by [@bacebu4](https://www.instagram.com/ui.bace/)
 
-React Layout Library is used for the unified system of laying out React Components by adding to them specified props such as `mt` (stands fro *margin-top*) and `ml` in `px` units.
+React Layout Library is used for the unified system of laying out React Components by adding to them specified props such as `mt` (stands fro _margin-top_) and `ml` in `px` units.
 
 The props are being added by applying Higher Order Components (HOC) to your components.
 
@@ -17,6 +17,7 @@ Besides that the library provides HOC for creating unified style for shadows and
 Check [example/src/\*](/example/src) for more in-depth usage.
 
 First, install the dependencies
+
 ```shell
 npm i -D styled-components
 npm i -D react-layout-library
@@ -37,21 +38,23 @@ const withShadowStyles = createShadowStyles({
 	y: 3,
 	b: 10,
 	s: 12,
-	color: '#0001A'
-})
+	color: "#0001A",
+});
 
 const StyledButtonLayout = styled.button`
 	padding: 12px 16px;
 `;
 
-export const StyledButton = withShadowStyles(withLayoutStyles(StyledButtonLayout));
+export const StyledButton = withShadowStyles(
+	withLayoutStyles(StyledButtonLayout)
+);
 ```
 
 ```js
 // App.tsx
 
-import { StyledButton } from './StyledButton';
-import { FlexBox } from 'react-layout-library';
+import { StyledButton } from "./StyledButton";
+import { FlexBox } from "react-layout-library";
 
 <FlexBox jc="center" ai="center" height="100vh">
 	<StyledButton>Sample button</StyledButton>
@@ -59,9 +62,23 @@ import { FlexBox } from 'react-layout-library';
 	<StyledButton mt={32} ml={16} mb={16} mr={4}>
 		Sample button with margin-top=32px and margin-left=16px
 	</StyledButton>
-</FlexBox>
-
+</FlexBox>;
 ```
+
+## `withShadowStyles`, `createShadowStyles`
+
+- `withShadowStyles` is the HOC which gives you the default nice looking soft shade.
+- `createShadowStyles` is the function for creating your own HOC's (**note:** passing down the empty object into the function gives you the same shadow values as using `withShadowStyles`)
+
+### `createShadowStyles` API
+
+| Name  | Default                     | Description                                                                                                                                                                 |
+| ----- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| x     | 2                           | offset-x. Specifies the horizontal distance                                                                                                                                 |
+| y     | 3                           | offset-y. Specifies the vertical distance                                                                                                                                   |
+| b     | 17                          | blur-radius. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed.                                         |
+| s     | 2                           | spread-radius. Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink.                                            |
+| color | 'rgba(114, 114, 114, 0.15)' | The basic string that you would usually write in CSS. See [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) values for possible keywords and notations. |
 
 ## Development (`src`, `lib` and the build process)
 
