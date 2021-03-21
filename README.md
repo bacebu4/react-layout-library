@@ -5,6 +5,7 @@
 # TOC
 
 - [Usage](#usage)
+- [Usage with Function Components](#usage-with-function-components)
 - [`withShadowStyles`, `createShadowStyles`](#withshadowstyles-createshadowstyles)
   - [`createShadowStyles` API](<#createshadowstyles(options)-api>)
 - [`<FlexBox>` API](#<flexbox>-api)
@@ -68,10 +69,46 @@ import { FlexBox } from "react-layout-library";
 <FlexBox jc="center" ai="center" height="100vh">
 	<StyledButton>Sample button</StyledButton>
 
-	<StyledButton mt={32} ml={16} mb={16} mr={4}>
-		Sample button with margin-top=32px and margin-left=16px
+	<StyledButton mt={3} ml={1} mb={6} mr={4}>
+		Sample button with margins
 	</StyledButton>
 </FlexBox>;
+```
+
+## Usage with Function Components
+
+```js
+// FunctionComponentButton.tsx
+
+import { withLayoutStyles } from "react-layout-library";
+
+const FunctionComponentButtonLayout: React.FC<{ className?: string }> = ({
+	className,
+}) => {
+	return (
+		<button className={className} type="button">
+			hey
+		</button>
+	);
+};
+
+export const FunctionComponentButton = withLayoutStyles(
+	FunctionComponentButton
+);
+```
+
+```js
+// App.tsx
+
+import { FunctionComponentButton } from "./StyledButton";
+
+<FunctionComponentButton>
+	Sample button
+</FunctionComponentButton>
+
+<FunctionComponentButton mt={32} ml={16} mb={16} mr={4}>
+	Sample button with margins
+</FunctionComponentButton>
 ```
 
 ## `withShadowStyles`, `createShadowStyles`
