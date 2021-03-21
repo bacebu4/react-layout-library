@@ -2,6 +2,16 @@
 [![size](https://img.shields.io/badge/self%20size-2.82%20kB-green)](https://bundlephobia.com/result?p=react-layout-library@1.0.1)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
+# TOC
+
+- [Usage](#usage)
+- [Usage with Function Components](#usage-with-function-components)
+- [`withShadowStyles`, `createShadowStyles`](#withshadowstyles-createshadowstyles)
+- [`createShadowStyles` API](<#createshadowstyles(options)-api>)
+- [`<FlexBox>` API](#<flexbox>-api)
+- [Development](<#development-(src,-lib-and-the-build-process)>)
+- [License](#license)
+
 # React Layout Library by [@bacebu4](https://www.instagram.com/ui.bace/)
 
 React Layout Library is used for the unified system of laying out React Components by adding to them specified props such as `mt` (stands fro _margin-top_) and `ml` in `px` units.
@@ -59,10 +69,46 @@ import { FlexBox } from "react-layout-library";
 <FlexBox jc="center" ai="center" height="100vh">
 	<StyledButton>Sample button</StyledButton>
 
-	<StyledButton mt={32} ml={16} mb={16} mr={4}>
-		Sample button with margin-top=32px and margin-left=16px
+	<StyledButton mt={3} ml={1} mb={6} mr={4}>
+		Sample button with margins
 	</StyledButton>
 </FlexBox>;
+```
+
+## Usage with Function Components
+
+```js
+// FunctionComponentButton.tsx
+
+import { withLayoutStyles } from "react-layout-library";
+
+const FunctionComponentButtonLayout: React.FC<{ className?: string }> = ({
+	className,
+}) => {
+	return (
+		<button className={className} type="button">
+			hey
+		</button>
+	);
+};
+
+export const FunctionComponentButton = withLayoutStyles(
+	FunctionComponentButton
+);
+```
+
+```js
+// App.tsx
+
+import { FunctionComponentButton } from "./StyledButton";
+
+<FunctionComponentButton>
+	Sample button
+</FunctionComponentButton>
+
+<FunctionComponentButton mt={32} ml={16} mb={16} mr={4}>
+	Sample button with margins
+</FunctionComponentButton>
 ```
 
 ## `withShadowStyles`, `createShadowStyles`
@@ -70,7 +116,16 @@ import { FlexBox } from "react-layout-library";
 - `withShadowStyles` is the HOC which gives you the default nice looking soft shade.
 - `createShadowStyles` is the function for creating your own HOC's (**note:** passing down the empty object into the function gives you the same shadow values as using `withShadowStyles`)
 
-### `createShadowStyles` API
+### `createShadowStyles(options)` API
+
+**options** object required
+{
+x: number;
+y: number;
+b: number;
+s: number;
+color: string
+}
 
 | Name  | Default                     | Description                                                                                                                                                                 |
 | ----- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -79,6 +134,26 @@ import { FlexBox } from "react-layout-library";
 | b     | 17                          | blur-radius. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed.                                         |
 | s     | 2                           | spread-radius. Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink.                                            |
 | color | 'rgba(114, 114, 114, 0.15)' | The basic string that you would usually write in CSS. See [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) values for possible keywords and notations. |
+
+## `<FlexBox>` API
+
+| Name      | Type                                                                                                                            | Description                 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| direction | "column"                                                                                                                        | If not specified then "row" |
+| jc        | "space-around" \| "space-between" \| "space-evenly" \| "stretch" \| "center" \| "end" \| "flex-end" \| "flex-start"             | justify-content             |
+| ai        | "center" \| "end" \| "flex-end" \| "flex-start" \| "self-end" \| "self-start" \| "start" \| "baseline" \| "normal" \| "stretch" | align-items                 |
+| mt        | number                                                                                                                          | margin-top                  |
+| mb        | number                                                                                                                          | margin-bottom               |
+| ml        | number                                                                                                                          | margin-left                 |
+| mr        | number                                                                                                                          | margin-right                |
+| pt        | number                                                                                                                          | padding-top                 |
+| pb        | number                                                                                                                          | padding-bottom              |
+| pl        | number                                                                                                                          | padding-left                |
+| pr        | number                                                                                                                          | padding-right               |
+| margin    | string                                                                                                                          | margin                      |
+| padding   | string                                                                                                                          | padding                     |
+| w         | string                                                                                                                          | width                       |
+| h         | string                                                                                                                          | height                      |
 
 ## Development (`src`, `lib` and the build process)
 
