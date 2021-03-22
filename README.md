@@ -8,7 +8,7 @@
 - [Usage with Function Components](#usage-with-function-components)
 - [`withShadowStyles`, `createShadowStyles`](#withshadowstyles-createshadowstyles)
 - [`createShadowStyles` API](<#createshadowstyles(options)-api>)
-- [`<FlexBox>` API](#<flexbox>-api)
+- [`<FlexBox>` API](#flexbox-api)
 - [Development](<#development-(src,-lib-and-the-build-process)>)
 - [License](#license)
 
