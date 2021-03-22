@@ -93,7 +93,7 @@ const FunctionComponentButtonLayout: React.FC<{ className?: string }> = ({
 };
 
 export const FunctionComponentButton = withLayoutStyles(
-	FunctionComponentButton
+	FunctionComponentButtonLayout
 );
 ```
 
