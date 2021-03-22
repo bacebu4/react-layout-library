@@ -8,13 +8,13 @@
 - [Usage with Function Components](#usage-with-function-components)
 - [`withShadowStyles`, `createShadowStyles`](#withshadowstyles-createshadowstyles)
 - [`createShadowStyles` API](<#createshadowstyles(options)-api>)
-- [`<FlexBox>` API](#<flexbox>-api)
+- [`<FlexBox>` API](#flexbox-api)
 - [Development](<#development-(src,-lib-and-the-build-process)>)
 - [License](#license)
 
 # React Layout Library by [@bacebu4](https://www.instagram.com/ui.bace/)
 
-React Layout Library is used for the unified system of laying out React Components by adding to them specified props such as `mt` (stands fro _margin-top_) and `ml` in `px` units.
+React Layout Library is used for the unified system of laying out React Components by adding to them specified props such as `mt` (stands for _margin-top_) and `ml` in `px` units.
 
 The props are being added by applying Higher Order Components (HOC) to your components.
 
@@ -93,7 +93,7 @@ const FunctionComponentButtonLayout: React.FC<{ className?: string }> = ({
 };
 
 export const FunctionComponentButton = withLayoutStyles(
-	FunctionComponentButton
+	FunctionComponentButtonLayout
 );
 ```
 
