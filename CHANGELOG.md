@@ -1,3 +1,12 @@
+## [1.5.7](https://github.com/bacebu4/react-layout-library/compare/1.5.2...1.5.7) (2021-03-25)
+
+
+### Bug Fixes
+
+* **FlexBox:** now margins and paddings works correctly ([b9c4ecd](https://github.com/bacebu4/react-layout-library/commit/b9c4ecdf38f7879fc3113f5e47e86bc5e2e39911))
+
+
+
 ## [1.5.2](https://github.com/bacebu4/react-layout-library/compare/1.5.0...1.5.2) (2021-03-18)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * right version ([de471b5](https://github.com/bacebu4/react-layout-library/commit/de471b5712b6ffe47ec0866650502c0c413a9c10))
-
-
-
-# [1.3.0](https://github.com/bacebu4/react-layout-library/compare/1.2.0...1.3.0) (2021-03-17)
-
-
-### Features
-
-* better build script ([40df9b8](https://github.com/bacebu4/react-layout-library/commit/40df9b8a13714ab68e71221da8717ae570d7e395))
 
 
 
