@@ -41,7 +41,7 @@ declare module "FlexBox" {
     }
     export const FlexBox: import("styled-components").StyledComponent<"div", any, FlexBoxProps, never>;
 }
-declare module "index" {
+declare module "react-layout-library" {
     import { withLayoutStyles } from "LayoutStyles";
     import { withShadowStyles, createShadowStyle } from "ShadowStyles";
     import { FlexBox } from "FlexBox";
