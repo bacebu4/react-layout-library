@@ -41,26 +41,77 @@ export const FlexBox = styled.div<FlexBoxProps>`
   flex-direction: ${(props) => props.direction};
   justify-content: ${(props) => props.jc};
   align-items: ${(props) => props.ai};
-  margin-left: ${(props) => props.ml}px;
-  margin-right: ${(props) => props.ml}px;
-  margin-bottom: ${(props) => props.ml}px;
-  margin-top: ${(props) => props.mt}px;
-  padding-left: ${(props) => props.pl}px;
-  padding-right: ${(props) => props.pr}px;
-  padding-bottom: ${(props) => props.pb}px;
-  padding-top: ${(props) => props.pt}px;
+
+  ${(props) => {
+    if (props.ml) {
+      return `margin-left: ${props.ml}px;`;
+    }
+    return "";
+  }}
+
+  ${(props) => {
+    if (props.mt) {
+      return `margin-top: ${props.mt}px;`;
+    }
+    return "";
+  }}
+
+  ${(props) => {
+    if (props.mr) {
+      return `margin-right: ${props.mr}px;`;
+    }
+    return "";
+  }}
+
+  ${(props) => {
+    if (props.mb) {
+      return `margin-bottom: ${props.mb}px;`;
+    }
+    return "";
+  }}
+
+  ${(props) => {
+    if (props.pl) {
+      return `padding-left: ${props.pl}px;`;
+    }
+    return "";
+  }}
+
+  ${(props) => {
+    if (props.pt) {
+      return `padding-top: ${props.pt}px;`;
+    }
+    return "";
+  }}
+
+  ${(props) => {
+    if (props.pr) {
+      return `padding-right: ${props.pr}px;`;
+    }
+    return "";
+  }}
+
+  ${(props) => {
+    if (props.pl) {
+      return `padding-bottom: ${props.pb}px;`;
+    }
+    return "";
+  }}
+
   ${(props) => {
     if (props.margin) {
-      return `margin: ${props.margin}px;`;
+      return `margin: ${props.margin};`;
     }
     return "";
   }}
+
   ${(props) => {
     if (props.padding) {
-      return `padding: ${props.padding}px;`;
+      return `padding: ${props.padding};`;
     }
     return "";
   }}
+
   width: ${(props) => props.w};
   height: ${(props) => props.h};
 `;
