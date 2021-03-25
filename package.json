@@ -1,6 +1,6 @@
 {
   "name": "react-layout-library",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "description": "Library based on styled-components that provides unified interface for layouts",
   "keywords": [
     "react",
